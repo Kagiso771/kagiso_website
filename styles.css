@@ -210,3 +210,16 @@ h2 {
   border-bottom: 2px solid #f39c12;
 }
 
+.button {
+  color: var(--kamato-yellow);
+  padding: 10px 20px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.about-full {
+  background: linear-gradient(to bottom, rgba(89, 0, 124, 0.95), rgba(109, 70, 131, 0.95));
+  padding: 60px 20px;
+  color: white;
+}
+
