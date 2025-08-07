@@ -166,3 +166,47 @@ h2 {
 .about-text {
   max-width: 600px;
 }
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #111;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .logo img {
+  height: 50px;
+}
+
+.header .logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #fff;
+  border-bottom: 2px solid #f39c12;
+}
+
