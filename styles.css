@@ -9,11 +9,16 @@
   --text-dark: #000000;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: var(--kamato-purple);
   color: var(--text-light);
+  line-height: 1.6;
 }
 
 .navbar {
@@ -30,8 +35,10 @@ body {
   transition: color 0.3s;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a:focus {
   color: var(--kamato-pink);
+  outline: none;
 }
 
 .hero {
@@ -75,68 +82,41 @@ body {
   color: var(--text-light);
 }
 
-.section.light {
-  background-color: #fff;
-  color: var(--text-dark);
-}
-
 h2 {
   text-align: center;
   margin-bottom: 40px;
   color: var(--kamato-yellow);
 }
 
-.service-grid, .team-grid {
+/* Background image section */
+.background-image-section {
+  background: url('images/service_image.png') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 0 10px;
+  align-items: center;
 }
 
-.service-card, .team-card {
-  background-color: var(--kamato-panel);
+.overlay-text {
+  background-color: rgba(44, 0, 62, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
   color: var(--text-light);
-  border-radius: 12px;
-  padding: 20px;
-  width: 280px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
 }
 
-.section.light .service-card {
-  background-color: var(--kamato-yellow);
-  color: var(--kamato-purple);
-  font-weight: bold;
+/* Scroll animation */
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input, textarea {
-  padding: 10px;
-  font-size: 1em;
-  border: 2px solid var(--kamato-purple);
-  border-radius: 5px;
-}
-
-button[type="submit"] {
-  background-color: var(--kamato-yellow);
-  color: var(--kamato-purple);
-  padding: 10px;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button[type="submit"]:hover {
-  background-color: #e6ad00;
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .footer {
@@ -145,4 +125,44 @@ button[type="submit"]:hover {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .background-image-section {
+    height: 60vh;
+  }
+
+  .overlay-text {
+    padding: 20px;
+    font-size: 0.9em;
+  }
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.about-logo img {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.about-text {
+  max-width: 600px;
 }
