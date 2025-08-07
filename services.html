@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services – Kamato Rigging</title>
+  <link rel="icon" type="image/png" href="images/website_icon.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/website_icon.jpg" alt="Kamato Logo" />
+        <span>Kamato Rigging Specialists</span>
+      </a>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="safety.html">Safety</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <h1>Our Services</h1>
+    <p>Explore the diverse range of services we provide to support your operations and growth.</p>
+
+    <div class="services-grid">
+
+      <!-- Card 1 -->
+      <div class="service-card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Training & Support</h3>
+            <button>View Details</button>
+          </div>
+          <div class="card-back">
+            <ul>
+              <li>Rigging Safety Training</li>
+              <li>Mentorship Programs</li>
+              <li>On-site Coaching</li>
+              <li>Skills Development</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Mining Projects</h3>
+            <button>View Details</button>
+          </div>
+          <div class="card-back">
+            <ul>
+              <li>Winders and Chairlift Ropes</li>
+              <li>Box Front Rigging</li>
+              <li>Rope Splicing</li>
+              <li>Underground Equipment Handling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Events & Management</h3>
+            <button>View Details</button>
+          </div>
+          <div class="card-back">
+            <ul>
+              <li>Corporate Event Planning</li>
+              <li>Logistical Support</li>
+              <li>Venue Sourcing</li>
+              <li>Team Building</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Consulting & Recruitment</h3>
+            <button>View Details</button>
+          </div>
+          <div class="card-back">
+            <ul>
+              <li>Youth & Women Empowerment</li>
+              <li>Community Upliftment</li>
+              <li>Job Placement Services</li>
+              <li>Industrial Recruitment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="service-card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Rigging & Logistics</h3>
+            <button>View Details</button>
+          </div>
+          <div class="card-back">
+            <ul>
+              <li>Heavy Machinery Relocation</li>
+              <li>Material Handling & Lifting</li>
+              <li>Specialized Transport</li>
+              <li>Equipment Installation</li>
+              <li>Decommissioning Projects</li>
+              <li>On-site Logistics Management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Kamato Rigging Specialists. All rights reserved.</p>
+  </footer>
+
+  <!-- Flip Animation Script -->
+  <script>
+    function flipCard(card) {
+      card.classList.toggle('flipped');
+    }
+  </script>
+
+</body>
+</html>

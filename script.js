@@ -20,3 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Start observing the element
   observer.observe(slideSection);
 });
+
+// Flip card animation for services page
+function flipCard(card) {
+  card.classList.toggle('flipped');
+}
+
