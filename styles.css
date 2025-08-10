@@ -323,26 +323,41 @@ h2 {
 }
 
 /* Custom yellow diamond bullet list */
+/* Remove default bullets and add yellow custom bullets */
 .custom-list {
-  list-style: none;
-  margin: 0;
+  list-style: decimal; /* no browser bullets */
   padding-left: 0;
+  margin: 0;
+  overflow-y: auto; /* allow scrolling if needed */
+  max-height: 150px; /* limit height so scrollbar appears */
 }
+
 
 .custom-list li {
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 8px;
+  margin-top: 8px;
 }
 
-.custom-list li::before {
-  content: "◆"; /* Diamond shape */
-  position: absolute;
-  left: 0;
-  color: var(--kamato-yellow);
-  font-size: 1rem;
-  line-height: 1;
+/* Scrollbar styling for Chrome, Edge, Safari */
+.custom-list::-webkit-scrollbar {
+  width: 6px; /* thin scrollbar */
 }
+
+.custom-list::-webkit-scrollbar-track {
+  background: transparent; /* no background track */
+}
+
+.custom-list::-webkit-scrollbar-thumb {
+  background-color: var(--kamato-yellow);
+  border-radius: 10px;
+  min-height: 30px; /* short scrollbar thumb */
+}
+
+/* Scrollbar styling for Firefox */
+.custom-list {
+  scrollbar-width: thin;
+  scrollbar-color: var(--kamato-yellow) transparent;
+}
+
 
 /* ===== SAFETY PAGE STYLES ===== */
 
